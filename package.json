@@ -1,0 +1,28 @@
+{
+  "name": "react-point-break",
+  "version": "0.0.1",
+  "description": "React CSS media queries with breakpoint render props Component and Provider. 🔫",
+  "main": "dist/index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "react",
+    "css",
+    "media",
+    "query",
+    "queries",
+    "breakpoint",
+    "point break",
+    "render props"
+  ],
+  "author": "Matt Phillips <matt@mattphillips.io> (mattphillips.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattphillips/react-point-break.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mattphillips/react-point-break/issues"
+  },
+  "homepage": "https://github.com/mattphillips/react-point-break#readme"
+}
