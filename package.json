@@ -4,6 +4,18 @@
   "description": "React CSS media queries with breakpoint render props Component and Provider. 🔫",
   "main": "dist/index.js",
   "scripts": {
+    "build": "babel src -d dist --ignore *.test.js",
+    "contributor": "all-contributors add",
+    "contributor:gen": "all-contributors generate",
+    "lint": "eslint src",
+    "lint:fix": "yarn lint -- --fix",
+    "prepublishOnly": "yarn build",
+    "precommit": "lint-staged",
+    "prettier": "prettier 'src/**/*.js' --write --single-quote=true --print-width=120",
+    "test": "jest",
+    "test:coverage": "yarn test -- --coverage",
+    "test:report": "codecov",
+    "test:watch": "yarn test -- --watch"
   },
   "keywords": [
     "react",
@@ -24,5 +36,43 @@
   "bugs": {
     "url": "https://github.com/mattphillips/react-point-break/issues"
   },
-  "homepage": "https://github.com/mattphillips/react-point-break#readme"
+  "homepage": "https://github.com/mattphillips/react-point-break#readme",
+  "devDependencies": {
+    "all-contributors-cli": "^4.10.1",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
+    "babel-jest-assertions": "^0.1.0",
+    "babel-plugin-gwt": "^1.0.0",
+    "codecov": "^3.0.0",
+    "eslint": "^4.17.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "jest-each": "^0.3.1",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn prettier",
+      "git add"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "babel": {
+    "plugins": [
+      "babel-jest-assertions",
+      "gwt"
+    ]
+  }
 }
