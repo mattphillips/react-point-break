@@ -43,15 +43,30 @@
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
     "babel-jest-assertions": "^0.1.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-gwt": "^1.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "codecov": "^3.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "eslint": "^4.17.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.7.0",
+    "eslint-plugin-react": "^7.6.1",
     "husky": "^0.14.3",
     "jest": "^22.1.4",
     "jest-each": "^0.3.1",
+    "jest-extended": "^0.6.0",
     "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2"
+    "prettier": "^1.10.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.2.0"
   },
   "lint-staged": {
     "*.js": [
@@ -67,12 +82,28 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "setupFiles": [
+      "./setup/enzyme.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "babel": {
+    "presets": [
+      "react"
+    ],
     "plugins": [
+      "transform-class-properties",
+      "add-module-exports",
+      "transform-object-rest-spread",
+      "babel-plugin-transform-es2015-modules-commonjs",
       "babel-jest-assertions",
       "gwt"
     ]
+  },
+  "dependencies": {
+    "create-react-context": "^0.1.6"
   }
 }
