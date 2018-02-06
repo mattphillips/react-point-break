@@ -1,10 +1,10 @@
-import { Component } from 'react';
-import { func, object } from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Breakpoint extends Component {
+class Breakpoint extends React.Component {
   static propTypes = {
-    children: func.isRequired,
-    queries: object.isRequired // eslint-disable-line
+    children: PropTypes.func.isRequired,
+    queries: PropTypes.object.isRequired // eslint-disable-line
   };
 
   static defaultProps = {

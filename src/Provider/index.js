@@ -1,5 +1,5 @@
 import React from 'react';
-import { element } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { Provider } from '../Context';
 
@@ -8,7 +8,7 @@ const BreakPointProvider = ({ children, ...queries }) => {
 };
 
 BreakPointProvider.propTypes = {
-  children: element.isRequired
+  children: PropTypes.element.isRequired
 };
 
 export default BreakPointProvider;

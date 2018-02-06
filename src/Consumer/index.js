@@ -1,5 +1,5 @@
 import React from 'react';
-import { func } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import Breakpoint from '../Breakpoint';
 import { Consumer, defaultValue } from '../Context';
@@ -16,7 +16,7 @@ const BreakpointConsumer = ({ children, ...queries }) => {
 };
 
 BreakpointConsumer.propTypes = {
-  children: func.isRequired
+  children: PropTypes.func.isRequired
 };
 
 export default BreakpointConsumer;
