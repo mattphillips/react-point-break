@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breakpoint /> renders with given queries set to false 1`] = `
+<Breakpoint
+  queries={
+    Object {
+      "lg": "(min-width: 901px)",
+      "md": "(min-width: 801px) and (max-width: 900px)",
+    }
+  }
+>
+  <h1>
+    Small
+  </h1>
+</Breakpoint>
+`;
