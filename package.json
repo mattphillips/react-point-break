@@ -88,7 +88,8 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "setupTestFrameworkScriptFile": "jest-extended"
   },
   "babel": {
     "presets": [
