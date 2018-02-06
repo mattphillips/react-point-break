@@ -4,7 +4,7 @@
   "description": "React CSS media queries with breakpoint render props Component and Provider. 🔫",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src -d dist --ignore *.test.js",
+    "build": "NODE_ENV=production rollup --config rollup.config.js",
     "contributor": "all-contributors add",
     "contributor:gen": "all-contributors generate",
     "lint": "eslint src",
@@ -44,10 +44,12 @@
     "babel-jest": "^22.1.0",
     "babel-jest-assertions": "^0.1.0",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-gwt": "^1.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "codecov": "^3.0.0",
     "enzyme": "^3.3.0",
@@ -66,7 +68,11 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "rollup": "^0.55.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-node-resolve": "^3.0.2"
   },
   "lint-staged": {
     "*.js": [
@@ -92,17 +98,30 @@
     "setupTestFrameworkScriptFile": "jest-extended"
   },
   "babel": {
-    "presets": [
-      "react"
-    ],
-    "plugins": [
-      "transform-class-properties",
-      "add-module-exports",
-      "transform-object-rest-spread",
-      "babel-plugin-transform-es2015-modules-commonjs",
-      "babel-jest-assertions",
-      "gwt"
-    ]
+    "env": {
+      "production": {
+        "presets": [
+          [ "env", { "loose": true, "modules": false } ],
+          "react"
+        ],
+        "plugins": [
+          "transform-class-properties",
+          "transform-object-rest-spread"
+        ]
+      },
+      "test": {
+        "presets": [
+          "env",
+          "react"
+        ],
+        "plugins": [
+          "transform-class-properties",
+          "transform-object-rest-spread",
+          "babel-jest-assertions",
+          "gwt"
+        ]
+      }
+    }
   },
   "dependencies": {
     "create-react-context": "^0.1.6"
