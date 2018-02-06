@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Consumer /> overrides matching provider queries with given consumer queries 1`] = `
+<BreakPointProvider
+  lg="(min-width: 901px)"
+  md="(min-width: 801px) and (max-width: 900px)"
+>
+  <Provider
+    value={
+      Object {
+        "lg": "(min-width: 901px)",
+        "md": "(min-width: 801px) and (max-width: 900px)",
+      }
+    }
+  >
+    <BreakpointConsumer
+      lg="large override"
+      md="medium override"
+    >
+      <Consumer>
+        <Breakpoint
+          queries={
+            Object {
+              "lg": "large override",
+              "md": "medium override",
+            }
+          }
+        >
+          <h1>
+            Small
+          </h1>
+        </Breakpoint>
+      </Consumer>
+    </BreakpointConsumer>
+  </Provider>
+</BreakPointProvider>
+`;
+
+exports[`<Consumer /> renders Consumer with given queries 1`] = `
+<BreakpointConsumer
+  lg="(min-width: 901px)"
+  md="(min-width: 801px) and (max-width: 900px)"
+>
+  <Consumer>
+    <Breakpoint
+      queries={
+        Object {
+          "lg": "(min-width: 901px)",
+          "md": "(min-width: 801px) and (max-width: 900px)",
+        }
+      }
+    >
+      <h1>
+        Small
+      </h1>
+    </Breakpoint>
+  </Consumer>
+</BreakpointConsumer>
+`;
+
+exports[`<Consumer /> renders Consumer with provider queries and given queries 1`] = `
+<BreakPointProvider
+  sm="small query"
+>
+  <Provider
+    value={
+      Object {
+        "sm": "small query",
+      }
+    }
+  >
+    <BreakpointConsumer
+      lg="(min-width: 901px)"
+      md="(min-width: 801px) and (max-width: 900px)"
+    >
+      <Consumer>
+        <Breakpoint
+          queries={
+            Object {
+              "lg": "(min-width: 901px)",
+              "md": "(min-width: 801px) and (max-width: 900px)",
+              "sm": "small query",
+            }
+          }
+        >
+          <h1>
+            Extra Small
+          </h1>
+        </Breakpoint>
+      </Consumer>
+    </BreakpointConsumer>
+  </Provider>
+</BreakPointProvider>
+`;
+
+exports[`<Consumer /> renders given children render function 1`] = `
+<BreakpointConsumer>
+  <Consumer>
+    <Breakpoint
+      queries={Object {}}
+    >
+      <h1>
+        Hello, world!
+      </h1>
+    </Breakpoint>
+  </Consumer>
+</BreakpointConsumer>
+`;
