@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Provider /> renders given children 1`] = `
+<Provider
+  value={Object {}}
+>
+  <h1>
+    Hello, world!
+  </h1>
+</Provider>
+`;
+
+exports[`<Provider /> renders provider with given queries 1`] = `
+<Provider
+  value={
+    Object {
+      "lg": "(min-width: 901px)",
+      "md": "(min-width: 801px) and (max-width: 900px)",
+    }
+  }
+>
+  <h1>
+    Hello, world!
+  </h1>
+</Provider>
+`;
