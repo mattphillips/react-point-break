@@ -1,6 +1,6 @@
 {
   "name": "react-point-break",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React CSS media queries with breakpoint render props Component and Provider. 🔫",
   "main": "dist/index.js",
   "scripts": {
