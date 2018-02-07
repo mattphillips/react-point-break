@@ -172,7 +172,7 @@ const App = () => {
 
  - [react-meida](https://github.com/ReactTraining/react-media)
  - [react-responsive](https://github.com/contra/react-responsive)
- - [...]()
+ - ?
 
 ## Contributors
 
