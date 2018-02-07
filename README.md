@@ -26,6 +26,8 @@
 `react-point-break` gives you a `<Breakpoint>` component and an optional `<BreakpointProvider>` used to listen to CSS
 media queries and render the matching query using render props.
 
+[Demo](http://react-point-break.mattphillips.io)
+
 ## Installation
 
 With npm:

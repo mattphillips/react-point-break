@@ -1,0 +1,33 @@
+.App {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 3rem 0;
+}
+
+.demo {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 7px,
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(90deg, transparent, transparent 7px, rgba(0, 0, 0, 0.2) 1px, transparent 8px);
+  background-size: 8px 8px;
+  padding: 0.1px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 75%;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
