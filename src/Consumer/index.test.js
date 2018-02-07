@@ -16,6 +16,11 @@ describe('<Consumer />', () => {
     expect(component).toMatchSnapshot();
   });
 
+  it('renders given render function', () => {
+    const component = mount(<Consumer render={() => <h1>Hello, world!</h1>} />);
+    expect(component).toMatchSnapshot();
+  });
+
   it('renders Consumer with given queries', () => {
     window.matchMedia = () => ({ addListener: noop });
 

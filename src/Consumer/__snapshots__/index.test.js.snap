@@ -106,3 +106,19 @@ exports[`<Consumer /> renders given children render function 1`] = `
   </Consumer>
 </BreakpointConsumer>
 `;
+
+exports[`<Consumer /> renders given render function 1`] = `
+<BreakpointConsumer
+  render={[Function]}
+>
+  <Consumer>
+    <Breakpoint
+      queries={Object {}}
+    >
+      <h1>
+        Hello, world!
+      </h1>
+    </Breakpoint>
+  </Consumer>
+</BreakpointConsumer>
+`;
