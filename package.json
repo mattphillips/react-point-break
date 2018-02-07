@@ -1,6 +1,6 @@
 {
   "name": "react-point-break",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React CSS media queries with breakpoint render props Component and Provider. 🔫",
   "main": "dist/index.js",
   "scripts": {
@@ -101,7 +101,13 @@
     "env": {
       "production": {
         "presets": [
-          [ "env", { "loose": true, "modules": false } ],
+          [
+            "env",
+            {
+              "loose": true,
+              "modules": false
+            }
+          ],
           "react"
         ],
         "plugins": [
