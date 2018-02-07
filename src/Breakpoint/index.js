@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const entries = o => Object.keys(o).map(key => [key, o[key]]);
+
 class Breakpoint extends React.Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
@@ -13,11 +15,11 @@ class Breakpoint extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = Object.entries(props.queries).reduce((acc, [name]) => ({ ...acc, [name]: false }), {});
+    this.state = entries(props.queries).reduce((acc, [name]) => ({ ...acc, [name]: false }), {});
   }
 
   componentDidMount() {
-    this.queries = Object.entries(this.props.queries).map(([name, query]) => {
+    this.queries = entries(this.props.queries).map(([name, query]) => {
       const mql = window.matchMedia(query);
       mql.addListener(this.update);
       return { mql, name };
