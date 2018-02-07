@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-point-break": "^1.0.0",
+    "react-syntax-highlighter": "^7.0.0"
   },
   "devDependencies": {
-    "react-scripts": "1.1.0",
-    "react-syntax-highlighter": "^7.0.0"
+    "react-scripts": "1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
