@@ -50,7 +50,7 @@ tree.
 ### `Breakpoint`
 
 Props:
- - Media queries to match, the given prop name will be passed into the render prop function, for example: `sm=""`.
+ - Media queries to match, the given prop name will be passed into the render prop function, for example: `sm="(max-width: 479px)"`.
  - `render` or `children`: a function that will be called with the given prop names as boolean values for the queries
  that matches.
 
@@ -87,7 +87,7 @@ const App = () => {
 
 Props:
  - Media queries to match, the given prop name will be passed into the render prop function of any child `Breakpoint`
- components, for example: `sm=""`.
+ components, for example: `sm="(max-width: 479px)"`.
  - `children` to be rendered.
 
 ```js
